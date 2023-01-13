@@ -7,6 +7,8 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { PersonajesComponent } from './personajes/personajes.component';
 import { AgregarComponent } from './agregar/agregar.component';
 
+import { DbzService } from './services/dbz.service';
+
 //CommonModule es para NgFor e NgIf
 
 
@@ -21,6 +23,9 @@ import { AgregarComponent } from './agregar/agregar.component';
     FormsModule,
     HttpClientModule
   ],
-  exports: [MainPageComponent]
+  exports: [MainPageComponent],
+  providers: [
+    DbzService
+  ]
 })
 export class DbzModule { }
