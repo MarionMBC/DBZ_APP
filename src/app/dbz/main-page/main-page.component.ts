@@ -9,24 +9,15 @@ import { DbzService } from '../services/dbz.service';
 })
 export class MainPageComponent {
 
-  personajes: Personaje [] = []
-
   nuevo:Personaje = {
-    name: "Marion",
-    power: 3424234324
+    name: "",
+    power:0
   }
 
-  constructor (private http:HttpClient, private service1:DbzService) {
-    http.get('https://heroes-angular01-default-rtdb.firebaseio.com/.json')
-    .subscribe ((res:Personaje|any) =>{
-      this.personajes = res
-    })
-  }
+  // agregarNuevoPersonaje(newCharacter:Personaje) {
+  // }
 
-  agregarNuevoPersonaje(newCharacter:Personaje) {
-    //! debugger: Para hacer debug
-    this.personajes.push(newCharacter)
-  }
-
+  constructor ()
+  {}
 
 }
